@@ -11,7 +11,7 @@ col_name = ['Measurement']
 measurements = pd.read_csv(new_dir + '01.12.csv', names=col_name)
 
 # define a function to count larger and smaller values 
-def count_measurements_type(df_name, column):
+def count_type(df_name, column):
     # convert the dataframe into a list
     list_name = df_name[column].values.tolist()
     # set the counter to 0 
@@ -32,11 +32,11 @@ def count_measurements_type(df_name, column):
 
 # call the function with the list name that was defined before
 print('Measurements:')
-count_measurements_type(measurements, 'Measurement')
+count_type(measurements, 'Measurement')
 
 
 # PART II
 # add one column with the sum of three records
 measurements['sum'] = measurements['Measurement'].rolling(3).sum()
 print('Sum:')
-count_measurements_type(measurements, 'sum')
+count_type(measurements, 'sum')
