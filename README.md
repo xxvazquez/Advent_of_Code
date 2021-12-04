@@ -4,7 +4,7 @@ Advent of Code is an Advent calendar of small programming puzzles for a variety 
 
 ### read_input.py
 
-In this file, I define a function that takes the file name (i.e. '01.12' in the 'inputs' folder) and the column names (i.e. ['Measurement']) as arguments to return a dataframe.
+In this file, I define a function that takes the file name(i.e. '01.12.csv' in the 'inputs' folder) and the column names (i.e. ['Measurement']) as parameters to return a dataframe.
 
 - own function 'read_file()'
 - [read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
@@ -13,7 +13,7 @@ In this file, I define a function that takes the file name (i.e. '01.12' in the 
 
 #### [Instructions](https://github.com/xxvazquez/Advent_of_Code/blob/main/instructions/01.12.diff)
 
-In part I, I define another function to count the larger and smaller values in a dataframe column. The arguments required are dataframe name and column name. It returns a print of the smaller and larger values.
+In part I, I define another function to count the larger and smaller values in a dataframe column. The parameters required are 'dataframe name' and 'column name'. It returns the smaller and larger values.
 
 - own function 'count_trype()'
 - [.values](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.values.html)
