@@ -1,10 +1,8 @@
 import pandas as pd
-from read_input import read_file, df
+from read_input import read_file
 
 # read the file from the first day 
-read_file('01.12.csv',['Measurement'])
-# change the name of the df
-measurements = df.copy()
+measurements = read_file('01.12.csv',['Measurement'])
 
 # PART I
 # define a function to count larger and smaller values 
