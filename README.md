@@ -20,9 +20,8 @@ In part I, I define another function to count the larger and smaller values in a
 - [for loop](https://docs.python.org/3/tutorial/controlflow.html)
 - [enumerate()](https://docs.python.org/3/library/functions.html#enumerate)
 
-In part II, I add a new column to the original dataframe and use the rolling function with a defined window equal to three that calculates the moving sum.
+In part II, I add a new column ('sum') to the original dataframe and use the rolling function with a defined window equal to three that calculates the moving sum.
 
-- .rolling()
-- .sum()
-
-window is a subset of rows that you perform a window calculation on
+- [.rolling()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html)
+   - [window](https://pandas.pydata.org/docs/reference/window.html) 
+- [.sum()](https://pandas.pydata.org/docs/reference/api/pandas.core.window.rolling.Rolling.sum.html)
