@@ -1,15 +1,12 @@
 import pandas as pd
-import os
+from read_input import read_file, df
+
+# read the file from the first day 
+read_file('01.12.csv',['Measurement'])
+# change the name of the df
+measurements = df.copy()
 
 # PART I
-# create the new dir
-current_dir = os.getcwd()
-new_dir = current_dir + '/inputs/' 
-
-# read the measurements from the file and add a column name
-col_name = ['Measurement']
-measurements = pd.read_csv(new_dir + '01.12.csv', names=col_name)
-
 # define a function to count larger and smaller values 
 def count_type(df_name, column):
     # convert the dataframe into a list
@@ -27,8 +24,8 @@ def count_type(df_name, column):
             else:
                 i_smaller += 1
     # print the values
-    print('Smaller:', i_smaller)
-    print('Larger:', i_larger)
+    print('Smaller -->', i_smaller)
+    print('Larger -->', i_larger)
 
 # call the function with the list name that was defined before
 print('Measurements:')
