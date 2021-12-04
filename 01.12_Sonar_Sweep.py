@@ -35,5 +35,3 @@ count_type(measurements, 'Measurement')
 measurements['sum'] = measurements['Measurement'].rolling(3).sum()
 print('Part Two - Sum:')
 count_type(measurements, 'sum')
-
-print((measurements['Measurement'].values)[4])
