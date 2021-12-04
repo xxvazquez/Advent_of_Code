@@ -27,7 +27,7 @@ In **part I**, I define another function that returns the count of the largest a
 - [tolist()](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.tolist.html#numpy.ndarray.tolist)
 - [enumerate()](https://docs.python.org/3/library/functions.html#enumerate)
 
-In **part II**, I add a new column ('sum') to the original dataframe and use the rolling function with a defined window equal to three that calculates the moving sum.
+In **part II**, I add a new column (_sum_) to the original dataframe and use the rolling function with a defined window equal to three that calculates the moving sum.
 
 - [.rolling()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html)
    - [window](https://pandas.pydata.org/docs/reference/window.html) 
@@ -37,7 +37,7 @@ In **part II**, I add a new column ('sum') to the original dataframe and use the
 
 ### 02.12_Dive.py
 
-In **part I**, I split the commands and the values into two columns and I convert the values to integers. Then I group the _values_ by _command_, sum them and calculate the depth (down-up) and the horizontal position. The calculated position is equal to the horizontal position times the depth.
+In **part I**, I split the commands and the values into two columns and I convert the values to integers. Then I group the values by command type, sum them and calculate the _depth_ (down-up) and the horizontal position. The calculated position is equal to the horizontal position times the depth.
 
 - [.str.split](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.split.html)
 - [.astype()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html)
