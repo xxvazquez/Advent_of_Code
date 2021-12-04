@@ -1,4 +1,3 @@
-import pandas as pd
 from read_input import read_file
 
 # read the file from the first day 
