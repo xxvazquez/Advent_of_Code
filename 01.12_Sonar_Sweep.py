@@ -4,9 +4,10 @@ from read_input import read_file
 measurements = read_file('01.12.csv',['Measurement'])
 
 # PART I
-def count_type(df_name, column):
+# define another function that returns the count of the largest and smallest values relative to the previous value of a specific column in the data frame.
+def count_type(df_name, column_name):
     # convert the dataframe to ndarray and then to a list
-    list_name = df_name[column].values.tolist()
+    list_name = df_name[column_name].values.tolist()
     # create two lists that will contain the values that are larger or smaller
     larger  = []
     smaller = []
@@ -31,7 +32,8 @@ count_type(measurements, 'Measurement')
 
 
 # PART II
-# add one column with the sum of three records
+# add one column with the sum of three records and use the rolling function with a defined window equal to three that calculates the moving sum
 measurements['sum'] = measurements['Measurement'].rolling(3).sum()
 print('Part Two - Sum:')
+#call the function and pass the new column in the column_name parameter
 count_type(measurements, 'sum')
