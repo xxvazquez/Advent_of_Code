@@ -4,33 +4,36 @@ from read_input import read_file
 measurements = read_file('01.12.csv',['Measurement'])
 
 # PART I
-# define a function to count larger and smaller values 
 def count_type(df_name, column):
-    # convert the dataframe into a list
+    # convert the dataframe to ndarray and then to a list
     list_name = df_name[column].values.tolist()
-    # set the counter to 0 
-    i_larger = 0
-    i_smaller = 0
-    # iterate over the list
+    # create two lists that will contain the values that are larger or smaller
+    larger  = []
+    smaller = []
+    # iterate over the list name and append values to the list depending on the condition
     for index, value in enumerate(list_name):
-        # exclude first value
-        if (index > 0):
-            if list_name[index] > list_name[index-1]:
-                # add the count
-                i_larger += 1
+        # exclude the firt record 
+        if index > 0:
+            # if the second, (third...) record is greater than the first (second...)
+            if (list_name[index] > list_name[index-1]):
+                # append to the list 'larger'
+                larger.append(value)
+            # otherwise append to the list 'smaller'
             else:
-                i_smaller += 1
+                smaller.append(value)
     # print the values
-    print('Smaller -->', i_smaller)
-    print('Larger -->', i_larger)
+    print('Smaller -->', len(smaller))
+    print('Larger -->', len(larger))
 
 # call the function with the list name that was defined before
-print('Measurements:')
+print('Part I - Measurements:')
 count_type(measurements, 'Measurement')
 
 
 # PART II
 # add one column with the sum of three records
 measurements['sum'] = measurements['Measurement'].rolling(3).sum()
-print('Sum:')
+print('Part Two - Sum:')
 count_type(measurements, 'sum')
+
+print((measurements['Measurement'].values)[4])
