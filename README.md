@@ -17,7 +17,7 @@ In this file, I define a function that takes the file name(i.e. '01.12.csv' in t
 
 #### [Instructions](https://github.com/xxvazquez/Advent_of_Code/blob/main/instructions/01.12.diff)
 
-In **part I**, I define another function that returns the count of the largest and smallest values relative to the previous value of a specific column in the data frame. The parameters required are _dataframe name_ and _column name_. 
+In **part I**, I define another function that returns the count of the largest and smallest values relative to the previous value of a specific column in the data frame. 
 
 - own function 'count_trype(_df_name, column_name_)'
 - [if statement](https://docs.python.org/3/tutorial/controlflow.html)
@@ -37,7 +37,7 @@ In **part II**, I add a new column (_sum_) to the original dataframe and use the
 
 ### 02.12_Dive.py
 
-At first, right after reading the file with my own function, I split the commands and the values into two columns and convert the values into integers. Then I define another function that returns the calculated position (part I) if the _final_position_ is False or the final position (part II) if the _final_position_ is True. The function first groups the values by command, defines the horizontal position and depth and then calculates the position depending on the selected parameter. If False, the calculated position is equal to the horizontal position times the depth. If True, the aim and depth are set to 0 and the function iterates over the rows of the data frame. If the value is _up_, the aim will decrease its value; if the value is _down_, the aim will increase its value; and if the value is _forward_, the depth will be equal to the value times the aim. The final position is calculated by multiplying the depth by the horizontal position.
+At first, right after reading the file with my own function, I split the commands and the values into two columns and convert the values into integers. Then I define another function that returns the _calculated position_ (**part I**) if the _final_position_ is _False_ or the _final position_ (**part II**) if the _final_position_ is _True_. The function first groups the values by _command_, defines the _horizontal position_ and _depth_ and then calculates the position depending on the selected parameter. If _False_, the _calculated position_ is equal to the _horizontal position_ times the _depth_. If _True_, the _aim_ and _depth_ are set to 0 and the function iterates over the rows of the data frame. If the value is _up_, the aim will decrease its value; if the value is _down_, the aim will increase its value; and if the value is _forward_, the _depth_ will be equal to the value times the _aim_. The _final position_ is calculated by multiplying the _depth_ by the _horizontal position_.
 
 - own function 'calculate_position(_df_name, commands_col, values_col, final_position=False_)'
 - [.str.split](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.split.html)
