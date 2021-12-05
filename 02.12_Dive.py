@@ -49,5 +49,5 @@ def calculate_position(df_name, commands_col, values_col, final_position=True):
         print('Final position:', final_position_calc)
 
 # call the function to reveal the position of the planned course
-calculate_position(commands, 'Command', 'Value', final_position=False)
+calculate_position(commands, 'Command', 'Value', final_position=True)
 
