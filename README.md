@@ -37,7 +37,7 @@ In **part II**, I add a new column (_sum_) to the original dataframe and use the
 
 ### 02.12_Dive.py
 
-### [Instructions](https://github.com/xxvazquez/Advent_of_Code/blob/main/instructions/02.12.diff)
+#### [Instructions](https://github.com/xxvazquez/Advent_of_Code/blob/main/instructions/02.12.diff)
 
 At first, right after reading the file with my own function, I split the commands and the values into two columns and convert the values into integers. Then I define another function that returns the _calculated position_ (**part I**) if the _final_position_ is _False_ or the _final position_ (**part II**) if the _final_position_ is _True_. The function first groups the values by _command_, defines the _horizontal position_ and _depth_ and then calculates the position depending on the selected parameter. If _False_, the _calculated position_ is equal to the _horizontal position_ times the _depth_. If _True_, the _aim_ and _depth_ are set to 0 and the function iterates over the rows of the data frame. If the value is _up_, the aim will decrease its value; if the value is _down_, the aim will increase its value; and if the value is _forward_, the _depth_ will be equal to the value times the _aim_. The _final position_ is calculated by multiplying the _depth_ by the _horizontal position_.
 
